@@ -145,7 +145,7 @@ export default function RegisterEditForm() {
 
             </form>
             
-            {user.first_name ? <Button type="button" color="error" onClick={() => handleDelete()} sx={{ width: "100%", my: 1 }}>Delete User</Button> : ''}
+            
         </>
     )
 
