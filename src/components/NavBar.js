@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useContext } from "react";
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
@@ -11,8 +11,12 @@ import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
+import { AppContext } from "../context/AppContext";
+import { Link } from "react-router-dom";
 
 export default function AccountMenu() {
+  // const theme = useTheme();
+  const { user} = useContext(AppContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -74,6 +78,7 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
+        {user.first_name? <section>
         <MenuItem>
           <Avatar /> Profile
         </MenuItem>
@@ -101,6 +106,18 @@ export default function AccountMenu() {
           Logout
           
         </MenuItem>
+        </section>
+        :<MenuItem>
+          <Link
+            to="/login"
+            style={{ textDecoration: "none", color: "black" }}>
+          <ListItemIcon>
+            <Logout fontSize="small" />
+          </ListItemIcon>
+            Login
+          </Link>
+          
+        </MenuItem>}
       </Menu>
     </React.Fragment>
   );
