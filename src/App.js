@@ -6,18 +6,24 @@ import LoginForm from './forms/LoginForm';
 import RegisterEditForm from './forms/RegisterEditForm';
 import {Route, Routes} from 'react-router-dom'
 import { CancelToken } from 'apisauce';
+import Logout from './views/Logout';
+import Login from './views/Login';
+import Box from '@mui/material/Box'
 
+const HomePage=()=>{return(<h1>Welcome to the Resume Scanner!</h1>)}
 
 function App() {
   return (
-    <div>
+    <>
       <NavBar></NavBar>
-      {/* <Button>Click this Button</Button>
-      <Error>This is an error message</Error> */}
-      <LoginForm/>
-      <RegisterEditForm/>
-      
-    </div>
+      <Box sx={{minHeight:'90vh'}}>
+        <Routes>
+              <Route path="/" element={<HomePage/>}/>
+              <Route path="/login" element={<Login/>}/>
+              <Route path="/logout" element={<Logout/>}/>
+        </Routes>
+      </Box>
+    </>
   );
 }
 
