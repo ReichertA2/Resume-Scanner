@@ -8,7 +8,8 @@ import {Route, Routes} from 'react-router-dom'
 import { CancelToken } from 'apisauce';
 import Logout from './views/Logout';
 import Login from './views/Login';
-import Box from '@mui/material/Box'
+import Box from '@mui/material/Box';
+import RegisterAndEdit from './views/RegisterAndEdit'
 
 const HomePage=()=>{return(<h1>Welcome to the Resume Scanner!</h1>)}
 
@@ -21,6 +22,7 @@ function App() {
               <Route path="/" element={<HomePage/>}/>
               <Route path="/login" element={<Login/>}/>
               <Route path="/logout" element={<Logout/>}/>
+              <Route path="/RegisterEdit" element={<RegisterAndEdit/>}/>
         </Routes>
       </Box>
     </>

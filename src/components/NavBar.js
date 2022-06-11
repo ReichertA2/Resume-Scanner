@@ -80,7 +80,12 @@ export default function AccountMenu() {
       >
         {user.first_name? <section>
         <MenuItem>
-          <Avatar /> Profile
+        <Link
+                      to="/RegisterEdit"
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
+          <Avatar /> Register/Edit Profile
+          </Link>
         </MenuItem>
         <MenuItem>
           <Avatar /> My account
