@@ -78,7 +78,7 @@ export default function LoginForm(){
             <Error>{error}</Error>
         </form>
         
-        <Link to='/RegisterEdit' style={{display:"flex", color:'inherit', textDecoration:'none'}}><Button type="submit" sx={{width:"100%", mt:2}}>{user.first_name?"Edit Profile":"Register"}</Button></Link> :
+        <Link to='/RegisterEdit' style={{display:"flex", color:'inherit', textDecoration:'none'}}><Button type="submit" sx={{width:"100%", mt:2}}>{user.first_name?"Edit Profile":"Register"}</Button></Link> 
         
         </>
     )
