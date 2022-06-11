@@ -95,9 +95,11 @@ export default function AccountMenu() {
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
+          
             <Logout fontSize="small" />
           </ListItemIcon>
           Logout
+          
         </MenuItem>
       </Menu>
     </React.Fragment>
