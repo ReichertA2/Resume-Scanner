@@ -11,6 +11,7 @@ import Login from './views/Login';
 import Box from '@mui/material/Box';
 import RegisterAndEdit from './views/RegisterAndEdit'
 import JobDescription from './forms/JobDescriptionForm'
+import ResumeForm from './forms/ResumeForm'
 
 const HomePage=()=>{return(<h1>Welcome to the Resume Scanner!</h1>)}
 
@@ -19,6 +20,7 @@ function App() {
     <>
       <NavBar></NavBar>
       <JobDescription />
+      <ResumeForm/>
       <Box sx={{minHeight:'90vh'}}>
         <Routes>
               <Route path="/" element={<HomePage/>}/>

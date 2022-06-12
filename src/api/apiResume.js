@@ -1,7 +1,6 @@
-
 import apiClientTokenAuth from './clientTokenAuth';
 
-const endpoint = '/keyword_extraction_for_url';
+const endpoint = '/keyword_extraction_for_text';
 
 const post = async (data, cancelToken)=>{
     console.log('post data: ', data)
