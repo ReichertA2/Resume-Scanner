@@ -5,6 +5,10 @@ import Button from '../components/Button';
 import TextField from '@mui/material/TextField';
 import useResume from '../hooks/useResume'
 import TextareaAutosize from '@mui/base/TextareaAutosize';
+import { AppContext } from '../context/AppContext'
+import {  useContext } from 'react'
+
+
 
 // import useCreateCategory from '../hooks/useCreateCategory';
 // import useEditCategory from '../hooks/useEditCategory';
@@ -24,7 +28,11 @@ const FormSchema=Yup.object(
 
 export default function JobDescription(resume){
     const [newResume, setNewResume]=useState({})
-   
+    const { user} =useContext(AppContext)
+
+    // newResume["user_id"] = user.id
+    // console.log(user)
+
     useResume(newResume)
     // useCreateJob(newJob)
     
@@ -33,11 +41,15 @@ export default function JobDescription(resume){
     const initialValues={
         name:resume?.name ?? '',
         desc:resume?.desc ?? '',
+        
     }
     
     const handleSubmit=(values, resetForm)=>{
         if (newResume){
+            // console.log('Resume handleSubmit: ', values)
+            values["user"] = user
             console.log('Resume handleSubmit: ', values)
+
             setNewResume(values)
         }else{
             console.log('Resume handleSubmit: ', values)
