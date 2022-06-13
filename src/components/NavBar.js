@@ -14,6 +14,7 @@ import Logout from '@mui/icons-material/Logout';
 import { AppContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 
+
 export default function AccountMenu() {
   // const theme = useTheme();
   const { user} = useContext(AppContext);
@@ -26,8 +27,9 @@ export default function AccountMenu() {
     setAnchorEl(null);
   };
   return (
+    <nav style={{display:'block', width:'100%'}}>
     <React.Fragment>
-      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', float:"right" }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', float:"right", color: 'white' }}>
         <Typography sx={{ minWidth: 100 }}>Contact Us</Typography>
         <Typography sx={{ minWidth: 100 }}>Profile</Typography>
         <Tooltip title="Account settings">
@@ -42,6 +44,7 @@ export default function AccountMenu() {
             <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
           </IconButton>
         </Tooltip>
+        
       </Box>
       <Menu
         anchorEl={anchorEl}
@@ -82,22 +85,22 @@ export default function AccountMenu() {
         <MenuItem>
         <Link
                       to="/RegisterEdit"
-                      style={{ textDecoration: "none", color: "black" }}
+                      style={{ textDecoration: "none", color: "white" }}
                     >
           <Avatar /> Register/Edit Profile
           </Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem style={{ textDecoration: "none", color: "white" }}>
           <Avatar /> My account
         </MenuItem>
         <Divider />
-        <MenuItem>
+        <MenuItem style={{ textDecoration: "none", color: "white" }}>
           <ListItemIcon>
             <PersonAdd fontSize="small" />
           </ListItemIcon>
           Add another account
         </MenuItem>
-        <MenuItem>
+        <MenuItem style={{ textDecoration: "none", color: "white" }}>
           <ListItemIcon>
             <Settings fontSize="small" />
           </ListItemIcon>
@@ -106,7 +109,7 @@ export default function AccountMenu() {
         <MenuItem>
         <Link
           to="/logout"
-          style={{ textDecoration: "none", color: "black" }}
+          style={{ textDecoration: "none", color: "white" }}
           >
           <ListItemIcon>
           
@@ -119,7 +122,7 @@ export default function AccountMenu() {
         :<MenuItem>
           <Link
             to="/login"
-            style={{ textDecoration: "none", color: "black" }}>
+            style={{ textDecoration: "none", color: "white" }}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
@@ -129,5 +132,6 @@ export default function AccountMenu() {
         </MenuItem>}
       </Menu>
     </React.Fragment>
+    </nav>
   );
 }
