@@ -1,9 +1,6 @@
-import React from 'react'
-import RegisterEditForm from '../forms/RegisterEditForm'
-
+import React from "react";
+import RegisterEditForm from "../forms/RegisterEditForm";
 
 export default function RegisterAndEdit() {
-  return (
-    <RegisterEditForm/>
-  )
+  return <RegisterEditForm />;
 }

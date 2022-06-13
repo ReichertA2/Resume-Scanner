@@ -65,9 +65,18 @@ export default function JobDescription(resume) {
   });
 
   return (
-    <div style={{ display: "inline-block", width:'300px' , backgroundColor: 'red'}}>
+    <div
+      style={{
+        display: "inline-block",
+        width: "45%",
+        // backgroundColor: "red",
+        padding: "0px 1rem",
+        margin: " 0px 1rem",
+        verticalAlign: "top",
+      }}
+    >
       <Typography variant="h6"></Typography>
-      <form onSubmit={formik.handleSubmit} >
+      <form onSubmit={formik.handleSubmit}>
         <TextField
           style={{ width: "200px", marginLeft: "20px" }}
           id="name"
@@ -82,7 +91,7 @@ export default function JobDescription(resume) {
         />
         <br />
         <TextareaAutosize
-          style={{ mt: "30px", width: 200, marginLeft: "20px" }}
+          style={{ mt: "30px", width: "90%", marginLeft: "20px" }}
           aria-label="minimum height"
           minRows={20}
           id="desc"
@@ -97,7 +106,7 @@ export default function JobDescription(resume) {
           helperText={formik.touched.desc && formik.errors.desc}
         />
         <br />
-        <Button type="submit" sx={{ marginLeft: "70px", marginBottom: "4px" }}>
+        <Button type="submit" sx={{ margin: "1rem 40%" }}>
           Submit
         </Button>
         {/* <Button color="error" onClick={()=>handleDelete()} sx={{width:"100%", my:1}}>Delete</Button> */}

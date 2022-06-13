@@ -27,7 +27,7 @@ export default function AccountMenu() {
     setAnchorEl(null);
   };
   return (
-    <nav style={{display:'block', width:'100%'}}>
+    <nav style={{display:'block', width:'95%', height:'75px', paddingTop:'15px'}}>
     <React.Fragment>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', float:"right", color: 'white' }}>
         <Typography sx={{ minWidth: 100 }}>Contact Us</Typography>

@@ -62,8 +62,12 @@ export default function JobDescription(job) {
     <div
       style={{
         display: "inline-block",
-        width: "300px",
-        backgroundColor: "green",
+        width: "45%",
+        // backgroundColor: "green",
+        padding: "0px 1rem",
+        margin: "0px 1rem",
+
+        verticalAlign: "top",
       }}
     >
       <form onSubmit={formik.handleSubmit}>
@@ -82,9 +86,9 @@ export default function JobDescription(job) {
         />
         <br />
         <TextareaAutosize
-          style={{ mt: "30px", width: 200, marginLeft: "20px" }}
+          style={{ mt: "30px", width: "95%", marginLeft: "20px" }}
           aria-label="minimum height"
-          minRows={3}
+          minRows={20}
           id="url"
           name="url"
           // fullWidth
@@ -97,7 +101,7 @@ export default function JobDescription(job) {
           helperText={formik.touched.url && formik.errors.url}
         />
         <br />
-        <Button type="submit" sx={{ marginLeft: "80px", marginTop: "259px" }}>
+        <Button type="submit" sx={{ margin: "1rem 40%" }}>
           Submit
         </Button>
         {/* <Button color="error" onClick={()=>handleDelete()} sx={{width:"100%", my:1}}>Delete</Button> */}

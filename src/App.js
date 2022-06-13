@@ -20,10 +20,11 @@ const HomePage = () => {
 
 function App() {
   return (
-    <div style={{width: "100%"}}>
-      <NavBar></NavBar>
-
-      <main style={{width: "80%", margin: '0px auto'}}>
+    <div style={{ width: "100%" }}>
+      <header style={{ height: "75px" }}>
+        <NavBar></NavBar>
+      </header>
+      <main style={{ width: "80%", margin: "0px auto" }}>
         <UserForms />
 
         <Box sx={{ minHeight: "90vh" }}>
