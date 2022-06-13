@@ -4,6 +4,8 @@ import { useFormik } from 'formik';
 import Button from '../components/Button';
 import TextField from '@mui/material/TextField';
 import useJobDescription from '../hooks/useJobDescription'
+import { AppContext } from '../context/AppContext'
+import {  useContext } from 'react'
 // import useCreateCategory from '../hooks/useCreateCategory';
 // import useEditCategory from '../hooks/useEditCategory';
 // import useDeleteCategory from '../hooks/useDeleteCategory';
@@ -22,7 +24,8 @@ const FormSchema=Yup.object(
 
 export default function JobDescription(job){
     const [newJob, setNewJob]=useState({})
-   
+    const { user} =useContext(AppContext)
+
     useJobDescription(newJob)
     // useCreateJob(newJob)
     
@@ -35,7 +38,9 @@ export default function JobDescription(job){
     
     const handleSubmit=(values, resetForm)=>{
         if (newJob){
+            values["user"] = user
             console.log('JobDescription handleSubmit: ', values)
+            
             setNewJob(values)
         }else{
             console.log('JobDescription handleSubmit: ', values)
