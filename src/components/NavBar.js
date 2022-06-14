@@ -14,6 +14,7 @@ import Logout from '@mui/icons-material/Logout';
 import { AppContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import AssessmentIcon from '@mui/icons-material/Assessment';
 
 
 
@@ -33,6 +34,9 @@ export default function AccountMenu() {
     <React.Fragment>
       <Link to="/UserFormsView">
       < AssignmentIcon style={{color: 'white', marginLeft: '2%'}}/>
+      </Link>
+      <Link to="/UserInfoView">
+      < AssessmentIcon style={{color: 'white', marginLeft: '2%'}}/>
       </Link>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', float:"right", color: 'white' }}>
         <Typography sx={{ minWidth: 100 }}>Contact Us</Typography>
