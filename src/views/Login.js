@@ -16,7 +16,7 @@ export default function Login() {
         backgroundImage: theme.palette.background.paper,
       }}
     >
-      <Typography variant="h4">Login</Typography>
+      <Typography variant="h4" color='white'>Login</Typography>
       <LoginForm />
     </Paper>
   );

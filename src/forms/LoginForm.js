@@ -46,7 +46,7 @@ export default function LoginForm() {
           id="email"
           name="email"
           fullWidth
-          sx={{ mb: 2, mt: 2 }}
+          sx={{ mb: 2, mt: 2, backgroundColor: 'white' }}
           label="email"
           placeholder="email"
           value={formik.values.email}
@@ -60,7 +60,7 @@ export default function LoginForm() {
           name="password"
           type="password"
           fullWidth
-          sx={{ mb: 2 }}
+          sx={{ mb: 2, backgroundColor: 'white'}}
           label="password"
           placeholder="password"
           value={formik.values.password}
