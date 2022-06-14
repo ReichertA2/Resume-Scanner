@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import { AppContext } from "../context/AppContext";
 import useCreateUser from "../hooks/useCreateUser";
 import useEditUser from "../hooks/useEditUser";
+import { Typography } from "@mui/material";
 
 // Defining our yup validation
 const FormSchema = Yup.object({
@@ -63,16 +64,16 @@ export default function RegisterEditForm() {
     <>
       <form onSubmit={formik.handleSubmit}>
         {!user.first_name ? (
-          <label>Register</label>
+          <Typography variant="h4" color='white'>Register</Typography>
         ) : (
-          <label>Edit Profile</label>
+          <Typography variant="h4" color='white'>Edit Profile</Typography>
         )}
 
         <TextField
           id="email"
           name="email"
           fullWidth
-          sx={{ mb: 2, mt: 2 }}
+          sx={{ mb: 2, mt: 2, backgroundColor: 'white' }}
           label="Email"
           placeholder="Email"
           value={formik.values.email}
@@ -85,7 +86,7 @@ export default function RegisterEditForm() {
           id="first_name"
           name="first_name"
           fullWidth
-          sx={{ mb: 2 }}
+          sx={{ mb: 2, backgroundColor: 'white' }}
           label="First Name"
           placeholder="First Name"
           value={formik.values.first_name}
@@ -98,7 +99,7 @@ export default function RegisterEditForm() {
           id="last_name"
           name="last_name"
           fullWidth
-          sx={{ mb: 2 }}
+          sx={{ mb: 2, backgroundColor: 'white' }}
           label="Last Name"
           placeholder="Last name"
           value={formik.values.last_name}
@@ -112,7 +113,7 @@ export default function RegisterEditForm() {
           name="password"
           type="password"
           fullWidth
-          sx={{ mb: 2 }}
+          sx={{ mb: 2, backgroundColor: 'white' }}
           label="Password"
           placeholder="Password"
           value={formik.values.password}
