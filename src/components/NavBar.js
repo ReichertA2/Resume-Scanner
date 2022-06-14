@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
 
+
 export default function AccountMenu() {
   // const theme = useTheme();
   const { user} = useContext(AppContext);
@@ -30,7 +31,9 @@ export default function AccountMenu() {
   return (
     <nav style={{display:'block', width:'95%', height:'75px', paddingTop:'15px'}}>
     <React.Fragment>
+      <Link to="/UserFormsView">
       < AssignmentIcon style={{color: 'white', marginLeft: '2%'}}/>
+      </Link>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', float:"right", color: 'white' }}>
         <Typography sx={{ minWidth: 100 }}>Contact Us</Typography>
         <Typography sx={{ minWidth: 100 }}>Profile</Typography>
