@@ -2,5 +2,5 @@ import React from "react";
 import ContactUs from "../components/ContactUs";
 
 export default function ContactUsView() {
-  return <ContactUs />;
+  return <ContactUs  />;
 }
