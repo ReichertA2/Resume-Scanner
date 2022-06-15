@@ -20,13 +20,14 @@ import Error from "./Error";
 import { CircularProgress } from "@mui/material";
 import Box from "@mui/material/Box";
 import { AppContext } from '../context/AppContext'
+import { Link } from "react-router-dom";
 
 export default function UserInfo() {
   const {user, setAlert, error} =useContext(AppContext)
   // const{keywords, error} = useKeyword();
   const navigate = useNavigate()
 
-  useKeyword(user);
+  // useKeyword(user);
 
   if (error) {
     return (
@@ -58,7 +59,7 @@ export default function UserInfo() {
           backgroundColor: "yellow",
         }}
       > */}
-        <Card sx={{ width: "25%", margin:'0px' , display: "inline-block"}}>
+        <Card sx={{ width: "25%", margin:'0px' , display: "inline-block", paddingTop: '2%', paddingLeft:'2%'}}>
           <CardHeader
             // action={
             //   <IconButton aria-label="settings">
@@ -82,7 +83,9 @@ export default function UserInfo() {
           <FavoriteIcon />
         </IconButton> */}
           <IconButton sx={{ color: "#5893df" }} aria-label="Edit Resume">
-            <EditIcon />
+          <Link to="/UserFormsView">
+            <EditIcon style={{color: 'white', marginLeft: '900%'}} />
+            </Link>
           </IconButton>
         </Card>
       {/* </section> */}
@@ -120,8 +123,12 @@ export default function UserInfo() {
           {/* <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton> */}
+        
           <IconButton sx={{ color: "#5893df" }} aria-label="Edit Resume">
-            <EditIcon />
+          <Link to="/UserFormsView">
+            <EditIcon style={{color: 'white', marginLeft: '1490%'}}/>
+          </Link>
+
           </IconButton>
         </Card>
       {/* </section> */}
