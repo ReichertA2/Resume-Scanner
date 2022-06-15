@@ -27,7 +27,9 @@ export default function UserInfo() {
   // const{keywords, error} = useKeyword();
   const navigate = useNavigate()
 
-  // useKeyword(user);
+  let response = useKeyword(user).data;
+
+  console.log('response from hook', response);
 
   if (error) {
     return (
