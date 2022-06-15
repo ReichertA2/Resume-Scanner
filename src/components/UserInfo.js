@@ -59,7 +59,7 @@ export default function UserInfo() {
           backgroundColor: "yellow",
         }}
       > */}
-        <Card sx={{ width: "25%", margin:'0px' , display: "inline-block", paddingTop: '2%', paddingLeft:'2%'}}>
+        <Card sx={{ width: "25%", margin:'0px' , display: "inline-block", paddingTop: '2%', paddingLeft:'4%'}}>
           <CardHeader
             // action={
             //   <IconButton aria-label="settings">
@@ -75,7 +75,7 @@ export default function UserInfo() {
               aria-label="minimum height"
               minRows={20}
               placeholder="Resume Text"
-              style={{ width: 200 }}
+              style={{ width: 220 }}
             />
           </CardContent>
 
@@ -84,7 +84,7 @@ export default function UserInfo() {
         </IconButton> */}
           <IconButton sx={{ color: "#5893df" }} aria-label="Edit Resume">
           <Link to="/UserFormsView">
-            <EditIcon style={{color: 'white', marginLeft: '900%'}} />
+            <EditIcon style={{color: 'white', marginLeft: '1100%'}} />
             </Link>
           </IconButton>
         </Card>
@@ -94,10 +94,14 @@ export default function UserInfo() {
       // width: "45%" 
       }}> */}
         <Card sx={{ 
-          width: "35%", 
+          width: "30%", 
           margin:'0px',
           marginLeft:'1%',
-          display: "inline-block"}}>
+          display: "inline-block",
+          paddingTop: '2%', 
+          paddingLeft:'4%',
+
+          }}>
           <CardHeader
             // action={
             //   <IconButton aria-label="settings">
@@ -126,7 +130,7 @@ export default function UserInfo() {
         
           <IconButton sx={{ color: "#5893df" }} aria-label="Edit Resume">
           <Link to="/UserFormsView">
-            <EditIcon style={{color: 'white', marginLeft: '1490%'}}/>
+            <EditIcon style={{color: 'white', marginLeft: '1420%'}}/>
           </Link>
 
           </IconButton>
