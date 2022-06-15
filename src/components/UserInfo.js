@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -14,8 +14,41 @@ import TextareaAutosize from "@mui/material/TextareaAutosize";
 import EditIcon from "@mui/icons-material/Edit";
 import JobDescriptionsAccordion from "./JobDescriptionsAccordion";
 import ResultCard from "./ResultCard";
+import useKeyword from "../hooks/useKeyword";
+import {useNavigate} from 'react-router-dom';
+import Error from "./Error";
+import { CircularProgress } from "@mui/material";
+import Box from "@mui/material/Box";
+import { AppContext } from '../context/AppContext'
 
 export default function UserInfo() {
+  const {user, setAlert, error} =useContext(AppContext)
+  // const{keywords, error} = useKeyword();
+  const navigate = useNavigate()
+
+  useKeyword(user);
+
+  if (error) {
+    return (
+      <Box sx={{ display: "flex" }}>
+        <Error>{error}</Error>
+      </Box>
+    );
+  }
+  console.log("user info",user)
+
+  
+  if (!user) {
+    console.log("no keywords", user)
+    return (
+      <Box sx={{ display: "flex" }}>
+        <CircularProgress />
+      </Box>
+    );
+  }
+  
+
+
   return (
     <article sx={{ margin:'0px auto'}}>
       {/* <section
