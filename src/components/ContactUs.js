@@ -11,6 +11,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Link } from "react-router-dom";
 
 export default function NestedList() {
  
@@ -32,13 +33,18 @@ export default function NestedList() {
         <ListItemIcon>
           <GitHubIcon style={{color: '5893df'}} />
         </ListItemIcon>
-        <ListItemText primary="https://github.com/ReichertA2 " />
+        <a href="https://github.com/ReichertA2">
+        <ListItemText style={{color:'white'}} primary="https://github.com/ReichertA2 " />
+        </a>
       </ListItemButton>
       <ListItemButton>
         <ListItemIcon>
           <LinkedInIcon style={{color: '5893df'}} />
         </ListItemIcon>
-        <ListItemText primary="https://www.linkedin.com/in/aydee-reichert" />
+        <a href="https://www.linkedin.com/in/aydee-reichert">
+        <ListItemText style={{color:'white'}} primary="https://www.linkedin.com/in/aydee-reichert" />
+        </a>
+        
       </ListItemButton>
       {/* <ListItemButton onClick={handleClick}>
         <ListItemIcon>
