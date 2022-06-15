@@ -24,6 +24,7 @@ export default function RecipeReviewCard() {
         //   </IconButton>
         // }
         title="Resume Title"
+        sx={{color: 'white'}}
         
       />
       
@@ -39,7 +40,7 @@ export default function RecipeReviewCard() {
         {/* <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton> */}
-        <IconButton aria-label="Edit Resume">
+        <IconButton sx={{color: '#5893df'}} aria-label="Edit Resume">
           <EditIcon />
         </IconButton>
 
@@ -50,6 +51,7 @@ export default function RecipeReviewCard() {
         //   </IconButton>
         // }
         title="Job Descriptions"
+        sx={{color: 'white'}}
         
       />
       
@@ -65,7 +67,7 @@ export default function RecipeReviewCard() {
         {/* <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton> */}
-        <IconButton aria-label="Edit Resume">
+        <IconButton sx={{color: '#5893df'}} aria-label="Edit Resume">
           <EditIcon />
         </IconButton>
 
