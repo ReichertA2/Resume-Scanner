@@ -12,6 +12,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 import EditIcon from '@mui/icons-material/Edit';
+import JobDescriptionsAccordion from './JobDescriptionsAccordion';
 
 export default function RecipeReviewCard() {
   return (
@@ -56,12 +57,13 @@ export default function RecipeReviewCard() {
       />
       
       <CardContent>
-      <TextareaAutosize
+        <JobDescriptionsAccordion/>
+      {/* <TextareaAutosize
         aria-label="minimum height"
         minRows={20}
         placeholder=""
         style={{ width: 200 }}
-        />
+        /> */}
       </CardContent>
      
         {/* <IconButton aria-label="add to favorites">
