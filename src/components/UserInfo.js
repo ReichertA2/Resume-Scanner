@@ -58,8 +58,9 @@ export default function UserInfo() {
       // width: "45%" 
       }}> */}
         <Card sx={{ 
-          width: "45%", 
+          width: "35%", 
           margin:'0px',
+          marginLeft:'1%',
           display: "inline-block"}}>
           <CardHeader
             // action={
@@ -72,8 +73,9 @@ export default function UserInfo() {
           />
 
           <CardContent>
+            
             <JobDescriptionsAccordion />
-            <ResultCard />
+           
             {/* <TextareaAutosize
         aria-label="minimum height"
         minRows={20}
@@ -90,6 +92,8 @@ export default function UserInfo() {
           </IconButton>
         </Card>
       {/* </section> */}
+      <ResultCard/>
+     
     </article>
   );
 }

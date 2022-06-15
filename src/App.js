@@ -15,7 +15,7 @@ import ResumeForm from "./forms/ResumeForm";
 import UserForms from "./components/UserForms";
 import UserFormsView from "./views/UserFormsView";
 import UserInfoView from "./views/UserInfoView";
-import JobDescriptionAccord from "./views/JobDescriptionAccord"
+
 
 const HomePage = () => {
   return <h1 sx={{ color: "white" }}>Welcome to the Resume Scanner!</h1>;
@@ -38,7 +38,6 @@ function App() {
             <Route path="/RegisterEdit" element={<RegisterAndEdit />} />
             <Route path="/UserFormsView" element={<UserFormsView />} />
             <Route path="/UserInfoView" element={<UserInfoView />} />
-            <Route path="/JobDescriptionAccord" element={<JobDescriptionAccord />} />
           </Routes>
         </Box>
       </main>
