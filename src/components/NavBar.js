@@ -39,7 +39,9 @@ export default function AccountMenu() {
       < AssessmentIcon style={{color: 'white', marginLeft: '2%'}}/>
       </Link>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', float:"right", color: 'white' }}>
-        <Typography sx={{ minWidth: 100 }}>Contact Us</Typography>
+        <Link to="/ContactUsView">
+        <Typography sx={{ minWidth: 100, color:'white', textDecoration: 'none'}}>Contact Us</Typography>
+        </Link>
         <Typography sx={{ minWidth: 100 }}>Profile</Typography>
         <Tooltip title="Account settings">
           <IconButton

@@ -84,7 +84,7 @@ export default function UserInfo() {
         </IconButton> */}
           <IconButton sx={{ color: "#5893df" }} aria-label="Edit Resume">
           <Link to="/UserFormsView">
-            <EditIcon style={{color: 'white', marginLeft: '1100%'}} />
+            <EditIcon style={{color: '5893df', marginLeft: '1100%'}} />
             </Link>
           </IconButton>
         </Card>
@@ -130,7 +130,7 @@ export default function UserInfo() {
         
           <IconButton sx={{ color: "#5893df" }} aria-label="Edit Resume">
           <Link to="/UserFormsView">
-            <EditIcon style={{color: 'white', marginLeft: '1420%'}}/>
+            <EditIcon style={{color: '5893df', marginLeft: '1420%'}}/>
           </Link>
 
           </IconButton>

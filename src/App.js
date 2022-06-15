@@ -15,6 +15,7 @@ import ResumeForm from "./forms/ResumeForm";
 import UserForms from "./components/UserForms";
 import UserFormsView from "./views/UserFormsView";
 import UserInfoView from "./views/UserInfoView";
+import ContactUsView from "./views/ContactUsView";
 
 
 const HomePage = () => {
@@ -38,6 +39,7 @@ function App() {
             <Route path="/RegisterEdit" element={<RegisterAndEdit />} />
             <Route path="/UserFormsView" element={<UserFormsView />} />
             <Route path="/UserInfoView" element={<UserInfoView />} />
+            <Route path="/ContactUsView" element={<ContactUsView />} />
           </Routes>
         </Box>
       </main>
