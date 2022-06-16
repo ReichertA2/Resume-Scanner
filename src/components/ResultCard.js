@@ -23,13 +23,13 @@ export default function BasicCard({jobs_hit,job_miss}) {
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           
         </Typography>
-        <Typography variant="h5" component="div">
+        <Typography sx={{color:'white'}} variant="h5" component="div">
           Results
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
           
         </Typography>
-        <Typography variant="body2">
+        <Typography sx={{color:'white'}} variant="body2">
           Missing words
           {job_miss.map((word,idx)=>(
           <li key={idx}> {word}</li>

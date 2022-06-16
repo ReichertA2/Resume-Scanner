@@ -72,13 +72,14 @@ export default function UserInfo() {
             sx={{ color: "white" }}
           />
 
-          <CardContent>
-            <TextareaAutosize
+          <CardContent sx={{color: "white"}}>
+            {response['desc']}
+            {/* <TextareaAutosize
               aria-label="minimum height"
               minRows={20}
-              placeholder="Resume Text"
+              // placeholder="Resume Text"
               style={{ width: 220 }}
-            />
+            /> */}
           </CardContent>
 
           {/* <IconButton aria-label="add to favorites">
@@ -116,15 +117,10 @@ export default function UserInfo() {
 
           <CardContent>
             
-            <JobDescriptionsAccordion />
+            <JobDescriptionsAccordion job_url={response['job_desc_info']}/>
             
       
-          </CardContent>
-
-          {/* <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton> */}
-        
+          </CardContent>        
           <IconButton sx={{ color: "#5893df" }} aria-label="Edit Resume">
           <Link to="/UserFormsView">
             <EditIcon style={{color: '5893df', marginLeft: '1420%'}}/>
