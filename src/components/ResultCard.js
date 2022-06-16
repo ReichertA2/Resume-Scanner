@@ -15,24 +15,30 @@ const bull = (
   </Box>
 );
 
-export default function BasicCard() {
+export default function BasicCard({jobs_hit,job_miss}) {
   return (
     <section>
     <Card sx={{ width: '30%' }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Results
+          
         </Typography>
         <Typography variant="h5" component="div">
-          be{bull}nev{bull}o{bull}lent
+          Results
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          adjective
+          
         </Typography>
         <Typography variant="body2">
-          well meaning and kindly.
+          Missing words
+          {job_miss.map((word,idx)=>(
+          <li key={idx}> {word}</li>
+          ))}
           <br />
-          {'"a benevolent smile"'}
+          Matching words
+          {jobs_hit.map((words,idx)=>(
+            <li key={idx}>{words}</li>
+          ))}
         </Typography>
       </CardContent>
       <CardActions>

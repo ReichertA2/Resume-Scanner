@@ -116,14 +116,9 @@ export default function UserInfo() {
 
           <CardContent>
             
-            <JobDescriptionsAccordion jobs_hit={response['jd_results']['phrase_matches']["phrase_hit"]} job_miss={response['jd_results']['phrase_matches']["phrase_miss"]}/>
-           
-            {/* <TextareaAutosize
-        aria-label="minimum height"
-        minRows={20}
-        placeholder=""
-        style={{ width: 200 }}
-        /> */}
+            <JobDescriptionsAccordion />
+            
+      
           </CardContent>
 
           {/* <IconButton aria-label="add to favorites">
@@ -138,7 +133,7 @@ export default function UserInfo() {
           </IconButton>
         </Card>
       {/* </section> */}
-      <ResultCard/>
+      <ResultCard jobs_hit={response['jd_results']['phrase_matches']["phrase_hit"]} job_miss={response['jd_results']['phrase_matches']["phrase_miss"]}/>
      
     </article>
   );
