@@ -6,7 +6,9 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
-export default function JobDescriptionsAccordion() {
+
+export default function JobDescriptionsAccordion({jobs_hit},{job_miss}) {
+  console.log(jobs_hit);
   return (
     <div >
       <Accordion sx={{width:'70%', backgroundColor:"white"}}>
@@ -20,8 +22,7 @@ export default function JobDescriptionsAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            {jobs_hit}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -35,8 +36,7 @@ export default function JobDescriptionsAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+           
           </Typography>
         </AccordionDetails>
       </Accordion>

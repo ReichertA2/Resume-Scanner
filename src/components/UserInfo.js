@@ -31,7 +31,7 @@ export default function UserInfo() {
 
   console.log('response from hook', response);
 
-  if (error) {
+  if (error || !response) {
     return (
       <Box sx={{ display: "flex" }}>
         <Error>{error}</Error>
@@ -116,7 +116,7 @@ export default function UserInfo() {
 
           <CardContent>
             
-            <JobDescriptionsAccordion />
+            <JobDescriptionsAccordion jobs_hit={response['jd_results']['phrase_matches']["phrase_hit"]} job_miss={response['jd_results']['phrase_matches']["phrase_miss"]}/>
            
             {/* <TextareaAutosize
         aria-label="minimum height"
