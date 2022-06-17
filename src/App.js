@@ -16,14 +16,25 @@ import UserForms from "./components/UserForms";
 import UserFormsView from "./views/UserFormsView";
 import UserInfoView from "./views/UserInfoView";
 import ContactUsView from "./views/ContactUsView";
-import Tilt from "./components/Tilt"
-
-
-
+import Tilt from "./components/Tilt";
 
 const HomePage = () => {
-  return <img height='100px' src = 'https://res.cloudinary.com/dla9zwzty/image/upload/v1655409211/landing_page_oecdx5.jpg' alt="HomePage"/>;
-  
+  return (
+    <section style={{ width: "100%", margin:'0px auto'}}>
+      <table background="van-tay-media-TFFn3BYLc5s-unsplash.jpg" style={{width:'100%',margin:'0px auto', height:'400px',}}>
+        <tbody >
+          <tr>
+            <td style={{ width: "45%",   margin:'0px auto', verticalAlign: 'top', fontSize:"4rem", color:'white'}}>
+              Welcome to Resume Scanner
+            </td>
+            <td style={{ width: "45%",   margin:'0px auto', verticalAlign: 'bottom', fontSize:"1.5rem", color:'white',paddingBottom:'1rem'}}>
+              Your one stop shop for all your resume needs.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  );
 };
 
 function App() {
@@ -33,12 +44,11 @@ function App() {
         <NavBar></NavBar>
       </header>
       <main style={{ width: "80%", margin: "0px auto" }}>
-        
         <Box sx={{ minHeight: "90vh" }}>
           {/* <Tilt/> */}
-        
+
           <Routes>
-            <Route path="/" element={<HomePage/>}/>
+            <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/RegisterEdit" element={<RegisterAndEdit />} />

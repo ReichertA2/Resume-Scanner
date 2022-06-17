@@ -15,6 +15,7 @@ import { AppContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import AssessmentIcon from '@mui/icons-material/Assessment';
+import HomeIcon from '@mui/icons-material/Home';
 
 
 
@@ -32,6 +33,9 @@ export default function AccountMenu() {
   return (
     <nav style={{display:'block', width:'95%', height:'75px', paddingTop:'15px'}}>
     <React.Fragment>
+    <Link to="/">
+      < HomeIcon style={{color: 'white', marginLeft: '2%'}}/>
+      </Link>
       <Link to="/UserFormsView">
       < AssignmentIcon style={{color: 'white', marginLeft: '2%'}}/>
       </Link>
