@@ -21,6 +21,7 @@ import { CircularProgress } from "@mui/material";
 import Box from "@mui/material/Box";
 import { AppContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
+import Button from "../components/Button";
 
 export default function UserInfo() {
   const { user, setAlert, error } = useContext(AppContext);
@@ -91,12 +92,15 @@ export default function UserInfo() {
           <CardContent sx={{ height:'600px',color: "white", padding:'1rem 1rem', overflowY: "scroll"}}>
             {response["desc"]}
           </CardContent>
-
-          <IconButton sx={{ color: "#5893df", margin:'1rem 1rem 1rem 90%' }} aria-label="Edit Resume">
+          <Button type="delete" sx={{  margin: "1rem 40%"}}>
+          Delete
+        </Button>
+          <IconButton sx={{ color: "#5893df", margin:'1rem 0rem' }} aria-label="Edit Resume">
             <Link to="/UserFormsView">
               <EditIcon style={{ color: "5893df" }} />
             </Link>
           </IconButton>
+          
         </Card>
       {/* </section>
 
