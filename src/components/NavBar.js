@@ -46,7 +46,7 @@ export default function AccountMenu() {
         <Link to="/ContactUsView">
         <Typography sx={{ minWidth: 100, color:'white', textDecoration: 'none'}}>Contact Us</Typography>
         </Link>
-        <Typography sx={{ minWidth: 100 }}>Profile</Typography>
+        {/* <Typography sx={{ minWidth: 100 }}>Profile</Typography> */}
         <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}

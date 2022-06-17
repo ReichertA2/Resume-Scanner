@@ -17,6 +17,7 @@ import UserFormsView from "./views/UserFormsView";
 import UserInfoView from "./views/UserInfoView";
 import ContactUsView from "./views/ContactUsView";
 import Tilt from "./components/Tilt";
+import StepperInstruction from "./components/StepperInstruction"
 
 const HomePage = () => {
   return (
@@ -46,7 +47,7 @@ function App() {
       <main style={{ width: "80%", margin: "0px auto" }}>
         <Box sx={{ minHeight: "90vh" }}>
           {/* <Tilt/> */}
-
+          <StepperInstruction/>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
