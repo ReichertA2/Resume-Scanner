@@ -16,10 +16,14 @@ import UserForms from "./components/UserForms";
 import UserFormsView from "./views/UserFormsView";
 import UserInfoView from "./views/UserInfoView";
 import ContactUsView from "./views/ContactUsView";
+import Tilt from "./components/Tilt"
+
+
 
 
 const HomePage = () => {
-  return <h1 sx={{ color: "white" }}>Welcome to the Resume Scanner!</h1>;
+  return <img height='100px' src = 'https://res.cloudinary.com/dla9zwzty/image/upload/v1655409211/landing_page_oecdx5.jpg' alt="HomePage"/>;
+  
 };
 
 function App() {
@@ -31,9 +35,10 @@ function App() {
       <main style={{ width: "80%", margin: "0px auto" }}>
         
         <Box sx={{ minHeight: "90vh" }}>
-          
+          {/* <Tilt/> */}
+        
           <Routes>
-            {/* <Route path="/" element={<HomePage/>}/> */}
+            <Route path="/" element={<HomePage/>}/>
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/RegisterEdit" element={<RegisterAndEdit />} />

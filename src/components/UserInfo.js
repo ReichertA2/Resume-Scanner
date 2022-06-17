@@ -15,21 +15,21 @@ import EditIcon from "@mui/icons-material/Edit";
 import JobDescriptionsAccordion from "./JobDescriptionsAccordion";
 import ResultCard from "./ResultCard";
 import useKeyword from "../hooks/useKeyword";
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import Error from "./Error";
 import { CircularProgress } from "@mui/material";
 import Box from "@mui/material/Box";
-import { AppContext } from '../context/AppContext'
+import { AppContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 
 export default function UserInfo() {
-  const {user, setAlert, error} =useContext(AppContext)
+  const { user, setAlert, error } = useContext(AppContext);
   // const{keywords, error} = useKeyword();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   let response = useKeyword(user).data;
 
-  console.log('response from hook', response);
+  console.log("response from hook", response);
 
   if (error || !response) {
     return (
@@ -38,73 +38,84 @@ export default function UserInfo() {
       </Box>
     );
   }
-  console.log("user info",user)
+  console.log("user info", user);
 
-  
   if (!user) {
-    console.log("no keywords", user)
+    console.log("no keywords", user);
     return (
       <Box sx={{ display: "flex" }}>
         <CircularProgress />
       </Box>
     );
   }
-  
-
 
   return (
-    <article sx={{ margin:'0px auto'}}>
+    <article
+      sx={{ margin: "0px auto", width: "100%", backgroundColor: "yellow",display:'inline-block' }}
+    >
       {/* <section
         sx={{
+          width: "45%",
+          backgroundColor: "red",
+
           display: "inline-block",
-          // width: "45%",
-          backgroundColor: "yellow",
         }}
       > */}
-        <Card sx={{ width: "25%", margin:'0px' , display: "inline-block", paddingTop: '2%', paddingLeft:'4%'}}>
+        <Card
+          sx={{
+            width: "45%",
+            padding:'0px 2rem 3rem ',
+            // margin: "0px",
+            display: "inline-block",
+            // paddingTop: "2%",
+            // paddingLeft: "4%",
+            fontSize: ".75rem",
+            maxHeight: "750px",
+            minHeight:'700px', 
+            verticalAlign:'top'
+            // scrollbarWidth: "none",
+          }}
+        >
           <CardHeader
             // action={
             //   <IconButton aria-label="settings">
             //     <MoreVertIcon />
             //   </IconButton>
             // }
-            title="Resume Title"
-            sx={{ color: "white" }}
+            title={response["name"]}
+            sx={{ color: "white", 
+
+          }}
           />
 
-          <CardContent sx={{color: "white"}}>
-            {response['desc']}
-            {/* <TextareaAutosize
-              aria-label="minimum height"
-              minRows={20}
-              // placeholder="Resume Text"
-              style={{ width: 220 }}
-            /> */}
+          <CardContent sx={{ height:'600px',color: "white", padding:'1rem 1rem', overflowY: "scroll"}}>
+            {response["desc"]}
           </CardContent>
 
-          {/* <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton> */}
-          <IconButton sx={{ color: "#5893df" }} aria-label="Edit Resume">
-          <Link to="/UserFormsView">
-            <EditIcon style={{color: '5893df', marginLeft: '1100%'}} />
+          <IconButton sx={{ color: "#5893df", margin:'1rem 1rem 1rem 90%' }} aria-label="Edit Resume">
+            <Link to="/UserFormsView">
+              <EditIcon style={{ color: "5893df" }} />
             </Link>
           </IconButton>
         </Card>
-      {/* </section> */}
+      {/* </section>
 
-      {/* <section sx={{ display: "inline-block", 
-      // width: "45%" 
-      }}> */}
-        <Card sx={{ 
-          width: "30%", 
-          margin:'0px',
-          marginLeft:'1%',
+      <section
+        sx={{
+          width: "45%",
+          backgroundColor: "red",
+
           display: "inline-block",
-          paddingTop: '2%', 
-          paddingLeft:'4%',
-
-          }}>
+        }}
+      > */}
+        <Card
+          sx={{
+            width: "45%",
+            margin: "0px",
+            marginLeft: "1%",
+            display: "inline-block",
+          }}
+        >
           <CardHeader
             // action={
             //   <IconButton aria-label="settings">
@@ -112,25 +123,26 @@ export default function UserInfo() {
             //   </IconButton>
             // }
             title="Job Descriptions"
-            sx={{ color: "white", padding: "18px" }}
+            sx={{ color: "white", 
+            display: "inline-block",}}
           />
 
-          <CardContent>
-            
-            <JobDescriptionsAccordion job_url={response['job_desc_info']}/>
-            
-      
-          </CardContent>        
-          <IconButton sx={{ color: "#5893df" }} aria-label="Edit Resume">
-          <Link to="/UserFormsView">
-            <EditIcon style={{color: '5893df', marginLeft: '1420%'}}/>
-          </Link>
-
+          <CardContent  sx={{ color: "white", 
+            display: "inline-block",}}>
+            <JobDescriptionsAccordion job_url={response["job_desc_info"]} />
+          </CardContent>
+          <IconButton sx={{ color: "#5893df", margin:'1rem 1rem 1rem 90%' }} aria-label="Edit Resume">
+            <Link to="/UserFormsView">
+              <EditIcon style={{ color: "5893df" }} />
+            </Link>
           </IconButton>
+          <ResultCard
+          jobs_hit={response["jd_results"]["phrase_matches"]["phrase_hit"]}
+          job_miss={response["jd_results"]["phrase_matches"]["phrase_miss"]}
+        />
         </Card>
+ 
       {/* </section> */}
-      <ResultCard jobs_hit={response['jd_results']['phrase_matches']["phrase_hit"]} job_miss={response['jd_results']['phrase_matches']["phrase_miss"]}/>
-     
     </article>
   );
 }
