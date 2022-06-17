@@ -9,6 +9,13 @@ const post = async (data, cancelToken) => {
   return response.ok;
 };
 
+const del= async (token, cancelToken)=>{
+  const response = await apiClientTokenAuth(token, cancelToken).delete(endpoint);
+  return response.ok
+}
+
+
 export default {
   post,
+  del
 };
