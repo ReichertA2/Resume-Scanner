@@ -35,7 +35,7 @@ export default function UserInfo() {
 
   console.log("response from hook", response);
 
-  if (error || !response) {
+  if (error || typeof(response) ==="undefined") {
     return (
       <Box sx={{ display: "flex" }}>
         <Error>{error}</Error>
@@ -151,6 +151,7 @@ export default function UserInfo() {
               <EditIcon style={{ color: "5893df" }} />
             </Link>
           </IconButton>
+          
           <ResultCard
           jobs_hit={response["jd_results"]["phrase_matches"]["phrase_hit"]}
           job_miss={response["jd_results"]["phrase_matches"]["phrase_miss"]}
