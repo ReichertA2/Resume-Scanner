@@ -13,7 +13,7 @@ export default function JobDescriptionsAccordion({job_url}) {
     <div >
               {job_url.map((url, idx)=>(
 
-      <Accordion sx={{width:'70%', backgroundColor:"white"}}>
+      <Accordion key={idx} sx={{width:'70%', backgroundColor:"white"}}>
 
           {/* // < div key={idx}> */}
 

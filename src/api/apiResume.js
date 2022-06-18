@@ -9,8 +9,12 @@ const post = async (data, cancelToken) => {
   return response.ok;
 };
 
-const del= async (token, cancelToken)=>{
-  const response = await apiClientTokenAuth(token, cancelToken).delete(endpoint);
+const del= async (token,id, cancelToken)=>{
+  console.log("delete data: ", id);
+
+  const response = await apiClientTokenAuth(token, cancelToken).delete('/delete_resume/'+id);
+  console.log("delete: ",response.ok );
+
   return response.ok
 }
 

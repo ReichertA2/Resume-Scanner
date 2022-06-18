@@ -5,7 +5,7 @@ import { AppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
 
 export default function useDeleteResume(resume) {
-  const { setAlert } = useContext(AppContext);
+  const {user, setAlert } = useContext(AppContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function useDeleteResume(resume) {
       console.log("useDeleteResume deleteResume: ", resume);
       // console.log('useCreateUser createUsers: ',source.token)
 
-      response = await apiResume.delete(resume, source.token);
+      response = await apiResume.del(user.token,resume["id"], source.token);
       console.log("useDeleteResume deleteResume: ", response);
       if (response) {
         setAlert({ msg: `Resume: ${resume.name} Deleted`, cat: "success" });

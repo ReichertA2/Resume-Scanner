@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -22,13 +22,16 @@ import Box from "@mui/material/Box";
 import { AppContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
+import useDeleteResume from "../hooks/useDeleteResume";
 
 export default function UserInfo() {
   const { user, setAlert, error } = useContext(AppContext);
+  const [deleteResume, setDeleteResume] = useState({})
   // const{keywords, error} = useKeyword();
   const navigate = useNavigate();
 
   let response = useKeyword(user).data;
+  useDeleteResume(deleteResume)
 
   console.log("response from hook", response);
 
@@ -39,15 +42,23 @@ export default function UserInfo() {
       </Box>
     );
   }
-  console.log("user info", user);
+  console.log("user info", response);
 
   if (!user) {
-    console.log("no keywords", user);
+    console.log("no keywords", response);
     return (
       <Box sx={{ display: "flex" }}>
         <CircularProgress />
       </Box>
     );
+  }
+
+  const handleDelete = () => {
+        
+    setDeleteResume(response)
+    
+    
+    console.log('test delete', response["id"])
   }
 
   return (
@@ -92,7 +103,7 @@ export default function UserInfo() {
           <CardContent sx={{ height:'600px',color: "white", padding:'1rem 1rem', overflowY: "scroll"}}>
             {response["desc"]}
           </CardContent>
-          <Button type="delete" sx={{  margin: "1rem 40%"}}>
+          <Button type="button" sx={{  margin: "1rem 40%"}} onClick={()=> handleDelete()}>
           Delete
         </Button>
           <IconButton sx={{ color: "#5893df", margin:'1rem 0rem' }} aria-label="Edit Resume">
