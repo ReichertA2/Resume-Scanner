@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 
 const steps = ['Select briefcase icon', 'Paste in resume and submit', 'Paste in Job Descriptions and submit'];
 
+
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
@@ -82,19 +83,20 @@ export default function HorizontalLinearStepper() {
             All steps completed - you&apos;re finished
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            <Box sx={{ flex: '1 1 auto' }} />
+            <Box sx={{ flex: '1 1 auto'}} />
             <Button onClick={handleReset}>Reset</Button>
           </Box>
         </React.Fragment>
       ) : (
         <React.Fragment>
           <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2}}>
             <Button
               color="inherit"
               disabled={activeStep === 0}
               onClick={handleBack}
               sx={{ mr: 1}}
+              
             >
               Back
             </Button>
