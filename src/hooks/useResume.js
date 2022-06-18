@@ -22,7 +22,7 @@ export default function useResume(resume) {
       if (response) {
         setAlert({ msg: `Resume: ${resume.name} Created`, cat: "success" });
         console.log("resume success", response);
-        navigate("/");
+        // navigate("/");
       } else if (response !== undefined && response === false) {
         setAlert({ msg: `Please Reauthorize Your Account`, cat: "warning" });
         navigate("/");

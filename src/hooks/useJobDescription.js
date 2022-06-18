@@ -22,7 +22,7 @@ export default function useJobDescription(job) {
       if (response) {
         setAlert({ msg: `User: ${job.name} Created`, cat: "success" });
         console.log("register success", response);
-        navigate("/");
+        // navigate("/");
       } else if (response !== undefined && response === false) {
         setAlert({ msg: `Please Reauthorize Your Account`, cat: "warning" });
         navigate("/");
