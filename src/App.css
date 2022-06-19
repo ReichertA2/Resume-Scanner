@@ -42,8 +42,7 @@
  .bg_image::before{
   background-position: center center;
   margin-left: 15%;
-  width:65%;
-  height:110%;
+
   content: "";
     background-size: cover;
     position: absolute;
@@ -54,13 +53,15 @@
     opacity: 0.2;
  }
     
-#UserForm{
+#UserForm, #MyAccount{
   position: relative; 
 }
 
 
 #UserForm::before{    
   background-image: url("/public/wordcloud.png") ;
+  width:65%;
+  height:110%;
 }
 
     
@@ -68,5 +69,20 @@
   /* background-image: url("/public/wordcloud.png"); */
   /* opacity: .3; */
  
+ 
+  
+  #MyAccount::before{    
+    background-image: url("/public/profile_pic.png") ;
+    width:50%;
+    height:100%;
+    margin: 0px 0px 0px 25%;
     
+  }
 
+  #ContactUs::before{    
+    background-image: url("/public/phone.png") ;
+    width:50%;
+    height:100%;
+    margin: 0px 0px 0px 25%;
+    
+  }

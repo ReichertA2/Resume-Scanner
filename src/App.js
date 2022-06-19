@@ -19,14 +19,17 @@ import ContactUsView from "./views/ContactUsView";
 import UnderConstructionView from "./views/UnderConstruction";
 import TimeLine from "./components/TimeLine";
 import MyAccountView from "./views/MyAccountView";
-import image from "./images/wordcloud.png"
+import image from "./images/wordcloud.png";
+import Carousel from "./components/Carousel";
 
 const HomePage = () => {
   return (
     <section style={{ width: "100%", margin: "0px auto" }}>
+      <Carousel />
+
       <table
-        background="van-tay-media-TFFn3BYLc5s-unsplash.jpg"
-        style={{ width: "100%", margin: "0px auto", height: "600px" }}
+        // background="van-tay-media-TFFn3BYLc5s-unsplash.jpg"
+        style={{ width: "100%", margin: "0px auto", height: "150px" }}
       >
         <tbody>
           <tr>
@@ -35,7 +38,7 @@ const HomePage = () => {
                 width: "45%",
                 margin: "0px auto",
                 verticalAlign: "top",
-                fontSize: "4rem",
+                fontSize: "2rem",
                 color: "white",
               }}
             >
@@ -44,9 +47,10 @@ const HomePage = () => {
             <td
               style={{
                 width: "45%",
-                margin: "0px auto",
+                textAlign: "right",
+                // margin: "0px 0px 0px 3%",
                 verticalAlign: "bottom",
-                fontSize: "1.5rem",
+                fontSize: "1.25rem",
                 color: "white",
                 paddingBottom: "1rem",
               }}
@@ -56,8 +60,10 @@ const HomePage = () => {
           </tr>
         </tbody>
       </table>
-      <div style={{textAlign: "center"}}>
-        <p style={{color:'white', margin:'5%'}}>Aydee Reichert &copy; 2022</p>
+      <div style={{ textAlign: "center" }}>
+        <p style={{ color: "white", margin: "5%" }}>
+          Aydee Reichert &copy; 2022
+        </p>
       </div>
     </section>
   );
@@ -71,8 +77,6 @@ function App() {
       </header>
       <main style={{ width: "80%", margin: "0px auto" }}>
         <Box sx={{ minHeight: "90vh" }}>
-        
-            
           {/* <Tilt/> */}
           {/* <TimeLine/> */}
           <Routes>
@@ -89,7 +93,6 @@ function App() {
             />
             <Route path="/MyAccount" element={<MyAccountView />} />
           </Routes>
-          
         </Box>
       </main>
     </div>

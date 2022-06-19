@@ -14,22 +14,23 @@ import { Link } from "react-router-dom";
 
 export default function NestedList() {
   return (
-    <>
+    <div id="ContactUs" class="bg_image">
       <List
         sx={{
           width: "100%",
-          maxWidth: 400,
-          bgcolor: "background.paper",
+          maxWidth: '25%',
+          // bgcolor: "background.paper",
           padding: "2%",
           color: "white",
-          margin: "0px 1% 0px 15%",
+          margin: "10% 1% 0% 37%",
           display: "inline-block",
+          opacity:'.9'
         }}
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={
           <ListSubheader
-            style={{ color: "white", fontSize: "larger", textAlign: "center" }}
+            style={{ color: "white", fontSize: "larger", textAlign: "center", backgroundColor: "transparent"}}
             component="div"
             id="nested-list-subheader"
           >
@@ -90,18 +91,11 @@ export default function NestedList() {
         {/* </List> */}
         {/* </Collapse> */}
       </List>
-      <section style={{ margin: "1% auto" , display: "inline-block", verticalAlign: "top" }}>
-        <img
-          style={{ margin: "0px 1%", borderRadius: "15px" , width:'70%'}}
-          src="keyboardandphone.jpg"
-          alt=""
-        ></img>
-        
-      </section>
+
       
       <div style={{textAlign: "center"}}>
-        <p style={{color:'white', margin:'20%'}}>Aydee Reichert &copy; 2022</p>
+        <p style={{color:'white', margin:'17%'}}>Aydee Reichert &copy; 2022</p>
       </div>
-    </>
+    </div>
   );
 }
