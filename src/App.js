@@ -1,4 +1,4 @@
-// import './App.css';
+import "./App.css";
 import NavBar from "./components/NavBar";
 import Button from "./components/Button";
 import Error from "./components/Error";
@@ -16,24 +16,49 @@ import UserForms from "./components/UserForms";
 import UserFormsView from "./views/UserFormsView";
 import UserInfoView from "./views/UserInfoView";
 import ContactUsView from "./views/ContactUsView";
-import Tilt from "./components/Tilt";
-import StepperInstruction from "./components/StepperInstruction"
+import UnderConstructionView from "./views/UnderConstruction";
+import TimeLine from "./components/TimeLine";
+import MyAccountView from "./views/MyAccountView";
+import image from "./images/wordcloud.png"
 
 const HomePage = () => {
   return (
-    <section style={{ width: "100%", margin:'0px auto'}}>
-      <table background="van-tay-media-TFFn3BYLc5s-unsplash.jpg" style={{width:'100%',margin:'0px auto', height:'400px',}}>
-        <tbody >
+    <section style={{ width: "100%", margin: "0px auto" }}>
+      <table
+        background="van-tay-media-TFFn3BYLc5s-unsplash.jpg"
+        style={{ width: "100%", margin: "0px auto", height: "600px" }}
+      >
+        <tbody>
           <tr>
-            <td style={{ width: "45%",   margin:'0px auto', verticalAlign: 'top', fontSize:"4rem", color:'white'}}>
+            <td
+              style={{
+                width: "45%",
+                margin: "0px auto",
+                verticalAlign: "top",
+                fontSize: "4rem",
+                color: "white",
+              }}
+            >
               Welcome to Resume Scanner
             </td>
-            <td style={{ width: "45%",   margin:'0px auto', verticalAlign: 'bottom', fontSize:"1.5rem", color:'white',paddingBottom:'1rem'}}>
+            <td
+              style={{
+                width: "45%",
+                margin: "0px auto",
+                verticalAlign: "bottom",
+                fontSize: "1.5rem",
+                color: "white",
+                paddingBottom: "1rem",
+              }}
+            >
               Your one stop shop for all your resume needs.
             </td>
           </tr>
         </tbody>
       </table>
+      <div style={{textAlign: "center"}}>
+        <p style={{color:'white', margin:'5%'}}>Aydee Reichert &copy; 2022</p>
+      </div>
     </section>
   );
 };
@@ -46,8 +71,10 @@ function App() {
       </header>
       <main style={{ width: "80%", margin: "0px auto" }}>
         <Box sx={{ minHeight: "90vh" }}>
+        
+            
           {/* <Tilt/> */}
-          <StepperInstruction/>
+          {/* <TimeLine/> */}
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
@@ -56,7 +83,13 @@ function App() {
             <Route path="/UserFormsView" element={<UserFormsView />} />
             <Route path="/UserInfoView" element={<UserInfoView />} />
             <Route path="/ContactUsView" element={<ContactUsView />} />
+            <Route
+              path="/UnderConstructionView"
+              element={<UnderConstructionView />}
+            />
+            <Route path="/MyAccount" element={<MyAccountView />} />
           </Routes>
+          
         </Box>
       </main>
     </div>

@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 } */
+
+
+
+ .bg_image::before{
+  background-position: center center;
+  margin-left: 15%;
+  width:65%;
+  height:110%;
+  content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+ }
+    
+#UserForm{
+  position: relative; 
+}
+
+
+#UserForm::before{    
+  background-image: url("/public/wordcloud.png") ;
+}
+
+    
+/* .bg_image::after{
+  /* background-image: url("/public/wordcloud.png"); */
+  /* opacity: .3; */
+ 
+    
+

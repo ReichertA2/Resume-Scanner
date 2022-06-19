@@ -73,6 +73,7 @@ export default function JobDescription(resume) {
         padding: "0px 1rem",
         margin: " 0px 1rem",
         verticalAlign: "top",
+        opacity:'.9'
       }}
     >
       <Typography variant="h6"></Typography>
@@ -91,7 +92,7 @@ export default function JobDescription(resume) {
         />
         <br />
         <TextareaAutosize
-          style={{ mt: "30px", width: "90%", marginLeft: "20px" }}
+          style={{ mt: "30px", width: "90%", marginLeft: "20px" , zIndex: '1',position: 'relative' }}
           aria-label="minimum height"
           minRows={20}
           id="desc"

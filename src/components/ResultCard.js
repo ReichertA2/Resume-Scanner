@@ -31,7 +31,7 @@ export default function BasicCard({ jobs_hit, job_miss }) {
         sx={{ color: "white", width: "100%", height: "2%",  }}
         variant="h5"
         component="div"
-        title="Phrase Hits and Misses"
+        title="Results"
       ></CardHeader>
       <CardContent sx={{border:'0px', }}>
         <Typography

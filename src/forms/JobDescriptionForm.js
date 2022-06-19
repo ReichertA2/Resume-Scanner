@@ -66,7 +66,7 @@ export default function JobDescription(job) {
         // backgroundColor: "green",
         padding: "0px 1rem",
         margin: "0px 1rem",
-
+        opacity:'.9',
         verticalAlign: "top",
       }}
     >
@@ -86,7 +86,7 @@ export default function JobDescription(job) {
         />
         <br />
         <TextareaAutosize
-          style={{ mt: "30px", width: "95%", marginLeft: "20px" }}
+          style={{ mt: "30px", width: "95%", marginLeft: "20px", zIndex: '1',position: 'relative' , }}
           aria-label="minimum height"
           minRows={20}
           id="url"

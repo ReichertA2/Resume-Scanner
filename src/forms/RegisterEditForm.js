@@ -62,77 +62,90 @@ export default function RegisterEditForm() {
 
   return (
     <>
-      <form onSubmit={formik.handleSubmit}>
-        {!user.first_name ? (
-          <Typography variant="h4" color='white'>Register</Typography>
-        ) : (
-          <Typography variant="h4" color='white'>Edit Profile</Typography>
-        )}
-
-        <TextField
-          id="email"
-          name="email"
-          fullWidth
-          sx={{ mb: 2, mt: 2, backgroundColor: 'white' }}
-          label="Email"
-          placeholder="Email"
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          error={formik.touched.email && Boolean(formik.errors.email)}
-          helperText={formik.touched.email && formik.errors.email}
-        />
-
-        <TextField
-          id="first_name"
-          name="first_name"
-          fullWidth
-          sx={{ mb: 2, backgroundColor: 'white' }}
-          label="First Name"
-          placeholder="First Name"
-          value={formik.values.first_name}
-          onChange={formik.handleChange}
-          error={formik.touched.first_name && Boolean(formik.errors.first_name)}
-          helperText={formik.touched.first_name && formik.errors.first_name}
-        />
-
-        <TextField
-          id="last_name"
-          name="last_name"
-          fullWidth
-          sx={{ mb: 2, backgroundColor: 'white' }}
-          label="Last Name"
-          placeholder="Last name"
-          value={formik.values.last_name}
-          onChange={formik.handleChange}
-          error={formik.touched.last_name && Boolean(formik.errors.last_name)}
-          helperText={formik.touched.last_name && formik.errors.last_name}
-        />
-
-        <TextField
-          id="password"
-          name="password"
-          type="password"
-          fullWidth
-          sx={{ mb: 2, backgroundColor: 'white' }}
-          label="Password"
-          placeholder="Password"
-          value={formik.values.password}
-          onChange={formik.handleChange}
-          error={formik.touched.password && Boolean(formik.errors.password)}
-          helperText={formik.touched.password && formik.errors.password}
-        />
-        {!user.first_name ? (
-          <Button type="submit" sx={{ width: "100%" }}>
-            Register
-          </Button>
-        ) : (
-          <div>
-            <Button type="submit" sx={{ width: "100%" }}>
+      <section sx={{ width: "50%" }}>
+        <form onSubmit={formik.handleSubmit}>
+          {!user.first_name ? (
+            <Typography variant="h4" color="white">
+              Register
+            </Typography>
+          ) : (
+            <Typography variant="h4" color="white">
               Edit Profile
+            </Typography>
+          )}
+
+          <TextField
+            id="email"
+            name="email"
+            fullWidth
+            sx={{ mb: 2, mt: 2, backgroundColor: "white" }}
+            label="Email"
+            placeholder="Email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            error={formik.touched.email && Boolean(formik.errors.email)}
+            helperText={formik.touched.email && formik.errors.email}
+          />
+
+          <TextField
+            id="first_name"
+            name="first_name"
+            fullWidth
+            sx={{ mb: 2, backgroundColor: "white" }}
+            label="First Name"
+            placeholder="First Name"
+            value={formik.values.first_name}
+            onChange={formik.handleChange}
+            error={
+              formik.touched.first_name && Boolean(formik.errors.first_name)
+            }
+            helperText={formik.touched.first_name && formik.errors.first_name}
+          />
+
+          <TextField
+            id="last_name"
+            name="last_name"
+            fullWidth
+            sx={{ mb: 2, backgroundColor: "white" }}
+            label="Last Name"
+            placeholder="Last name"
+            value={formik.values.last_name}
+            onChange={formik.handleChange}
+            error={formik.touched.last_name && Boolean(formik.errors.last_name)}
+            helperText={formik.touched.last_name && formik.errors.last_name}
+          />
+
+          <TextField
+            id="password"
+            name="password"
+            type="password"
+            fullWidth
+            sx={{ mb: 2, backgroundColor: "white" }}
+            label="Password"
+            placeholder="Password"
+            value={formik.values.password}
+            onChange={formik.handleChange}
+            error={formik.touched.password && Boolean(formik.errors.password)}
+            helperText={formik.touched.password && formik.errors.password}
+          />
+          {!user.first_name ? (
+            <Button type="submit" sx={{ width: "100%" }}>
+              Register
             </Button>
-          </div>
-        )}
-      </form>
+          ) : (
+            <div>
+              <Button type="submit" sx={{ width: "100%" }}>
+                Edit Profile
+              </Button>
+            </div>
+          )}
+        </form>
+      </section>
+      <div style={{ textAlign: "center" }}>
+        <p style={{ color: "white", margin: "5%" }}>
+          Aydee Reichert &copy; 2022
+        </p>
+      </div>
     </>
   );
 }
