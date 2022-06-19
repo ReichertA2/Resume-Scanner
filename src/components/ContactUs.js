@@ -17,12 +17,12 @@ export default function NestedList() {
     <div id="ContactUs" class="bg_image">
       <List
         sx={{
-          width: "100%",
-          maxWidth: '25%',
+          width: "30%",
+          // maxWidth: '25%',
           // bgcolor: "background.paper",
-          padding: "2%",
+          padding: "1% 2% 2% 5%",
           color: "white",
-          margin: "10% 1% 0% 37%",
+          margin: "7% 1% 0% 34%",
           display: "inline-block",
           opacity:'.9'
         }}
@@ -40,12 +40,12 @@ export default function NestedList() {
       >
         <ListItemButton>
           <ListItemIcon>
-            <GitHubIcon style={{ color: "5893df" }} />
+            <GitHubIcon style={{ color: "5893df", }} />
           </ListItemIcon>
           <a href="https://github.com/ReichertA2">
             <ListItemText
-              style={{ color: "white" }}
-              primary="https://github.com/ReichertA2 "
+              style={{ color: "white", width:'15%' }}
+              primary="www.github.com/ReichertA2 "
             />
           </a>
         </ListItemButton>
@@ -56,7 +56,7 @@ export default function NestedList() {
           <a href="https://www.linkedin.com/in/aydee-reichert">
             <ListItemText
               style={{ color: "white" }}
-              primary="https://www.linkedin.com/in/aydee-reichert"
+              primary="www.linkedin.com/in/aydee-reichert"
             />
           </a>
         </ListItemButton>
@@ -93,8 +93,8 @@ export default function NestedList() {
       </List>
 
       
-      <div style={{textAlign: "center"}}>
-        <p style={{color:'white', margin:'17%'}}>Aydee Reichert &copy; 2022</p>
+      <div style={{display:'flex',justifyContent: 'center',height:'220px',alignItems:'flex-end', margin:'10%'}}>
+        <p style={{color:'white',  }}>Aydee Reichert &copy; 2022</p>
       </div>
     </div>
   );
