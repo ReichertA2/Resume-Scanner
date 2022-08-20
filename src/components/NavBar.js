@@ -56,9 +56,9 @@ export default function AccountMenu() {
             color: "white",
           }}
         >
-          <Link to="/ContactUsView">
+          <Link style={{textDecoration:'none'}} to="/ContactUsView">
             <Typography
-              sx={{ minWidth: 100, color: "white", textDecoration: "none" }}
+              sx={{ minWidth: 100, color: "white", textDecoration: "none"}}
             >
               Contact Us
             </Typography>
