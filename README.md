@@ -22,8 +22,8 @@ top 10 missing keywords. User can then update their resume
 to better match the job description to increase their chances of getting
 through the applicant tracking system when applying to jobs.
 
-## Backend API
-[Flask-API]https://github.com/ReichertA2/Resume-Scanner-API.git
+## Backend API-Flask
+[Aydee Reichert](https://github.com/ReichertA2/Resume-Scanner-API.git)
 
 
 ## Setup
