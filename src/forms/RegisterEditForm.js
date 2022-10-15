@@ -41,7 +41,7 @@ export default function RegisterEditForm() {
       setEditUser({ ...values });
       console.log("Edit Profile");
     }
-    console.log(values);
+    // console.log(values);
     resetForm(initialValues);
   };
 
